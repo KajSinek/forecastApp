@@ -1,0 +1,272 @@
+:root {
+  --online: #44b700;
+  --offline: #b74400;
+}
+
+body {
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 16px;
+}
+
+.error {
+  margin: 0.5rem;
+  color: red;
+  text-align: center;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("img/background.jpg");
+}
+
+.App header {
+  background-color: white !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -webkit-box-shadow: 0px -10px 60px 10px #999999 !important;
+          box-shadow: 0px -10px 60px 10px #999999 !important;
+  width: 100% !important;
+  color: black !important;
+  background-color: whitesmoke;
+  margin-top: auto;
+  height: 700px;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 48px 1fr 300px;
+      grid-template-rows: 48px 1fr 300px;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: start !important;
+}
+
+.App header #weatherNav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr 1fr;
+  height: 100%;
+}
+
+.App header #weatherNav > div:nth-child(1) {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #999999;
+}
+
+.App header #weatherNav > div:nth-child(2) {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #0D9FEA14;
+  border-bottom-left-radius: 15px;
+  color: #0DA0EA;
+  font-weight: bold;
+}
+
+.App header #weatherInfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 95%;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.App header #weatherInfo #weatherDesc, .App header #weatherInfo #actTemp, .App header #weatherInfo .weatherTypeUni, .App header #weatherInfo #minMaxTemp {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.App header #weatherInfo #weatherDesc {
+  font-weight: 600;
+}
+
+.App header #weatherInfo #actTemp {
+  font-size: 48px;
+}
+
+.App header #weatherInfo #actTemp sup {
+  font-size: 21px;
+  top: -0.8em;
+  font-weight: bold;
+  color: #999999;
+}
+
+.App header #weatherInfo #minMaxTemp > div {
+  color: #999999;
+}
+
+.App header #weatherInfo #minMaxTemp > div svg {
+  width: 11px;
+  height: 11px;
+  color: #999999;
+}
+
+.App header #weatherInfo .weatherTypeUni > div:nth-child(2) {
+  color: #1e1e1e;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.App header #weatherInfo .weatherTypeUni > div:nth-child(3) {
+  color: #999999;
+  font-size: 11px;
+}
+
+.App header #weatherInfo img, .App header #weatherInfo svg {
+  width: 24px;
+  height: 24px;
+  color: #b4b4b4;
+}
+
+.App header #forecast {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 15px;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App header #forecast > div {
+  -webkit-box-shadow: 0px 2px 120px 10px gainsboro;
+          box-shadow: 0px 2px 120px 10px gainsboro;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.App header #forecast > div img, .App header #forecast > div svg {
+  width: 24px;
+  height: 24px;
+  color: #b4b4b4;
+}
+
+.App header #forecast > div > div:nth-child(2) {
+  font-weight: bold;
+}
+
+.App header #forecast > div > div:nth-child(3) {
+  font-size: 11px;
+}
+
+.App header #forecast > div > div:nth-child(3) svg {
+  width: 9px;
+  height: 9px;
+}
+
+.App .filter {
+  width: 100% !important;
+  padding: 0 1rem !important;
+  color: black !important;
+  background-color: whitesmoke;
+  margin-top: auto;
+  height: 700px;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 1fr;
+      grid-template-rows: 150px 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.App .filter .search-header {
+  width: 100%;
+}
+
+.App .filter .search-header .search-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #999999;
+  font-size: 14px;
+}
+
+.App .filter .search-header .right-inner-addon {
+  position: relative;
+}
+
+.App .filter .search-header .right-inner-addon input {
+  padding-right: 35px !important;
+  width: 100%;
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: #e6e6e6 !important;
+  border: none;
+}
+
+.App .filter .search-header .right-inner-addon svg {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  padding: 12px 12px;
+  pointer-events: none;
+  z-index: 999999999999999999999999999;
+}
+
+.App .filter #item-list ol {
+  list-style-type: none;
+}
+
+.App .filter #item-list ol li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.App .filter #item-list ol li button {
+  background-color: transparent;
+  width: 150px;
+  text-align: left;
+  border: none;
+}
+
+.App .filter #item-list ol li > div {
+  text-align: right;
+  color: #b4b4b4;
+}
+/*# sourceMappingURL=index.css.map */

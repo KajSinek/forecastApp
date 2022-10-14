@@ -1,0 +1,244 @@
+$grayColor: #999999;
+$lightGray: rgb(180, 180, 180);
+
+:root {
+    --online: #44b700;
+    --offline: #b74400;
+}
+  
+body {
+    font-family: 'Barlow', sans-serif !important;
+    font-size: 16px;
+}
+ 
+.error {
+    margin: 0.5rem;
+    color: red;
+    text-align: center;
+}
+
+.App {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img/background.jpg');
+
+    header {
+        background-color: white !important;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        box-shadow: 0px -10px 60px 10px $grayColor !important;
+      
+        width: 100% !important;
+        color: black !important;
+        background-color: whitesmoke;
+        margin-top: auto;
+        height: 700px;
+      
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-rows: 48px 1fr 300px;
+        align-items: start !important;
+
+        #weatherNav {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            height: 100%;
+
+            & > div {
+                &:nth-child(1) {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    color:$grayColor;
+                }
+
+                &:nth-child(2) {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #0D9FEA14;
+                    border-bottom-left-radius: 15px;
+                    color: #0DA0EA;
+                    font-weight: bold;
+                  }
+            }
+        }
+        
+        #weatherInfo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 95%;
+            height: 300px;
+            margin: 50px auto;
+
+            #weatherDesc, #actTemp, .weatherTypeUni, #minMaxTemp {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #weatherDesc {
+                font-weight: 600;
+            }
+
+            #actTemp {
+                font-size: 48px;
+
+                sup {
+                    font-size: 21px;
+                    top: -0.8em;
+                    font-weight: bold;
+                    color: $grayColor;
+                }
+            }
+
+            #minMaxTemp {
+                & > div {
+                    color: $grayColor;
+                    svg {
+                        width: 11px;
+                        height: 11px;
+                        color: $grayColor;
+                    }
+                }
+            }
+
+            .weatherTypeUni {
+
+                & > div {
+                    &:nth-child(2) {
+                        color:rgb(30, 30, 30);
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+
+                    &:nth-child(3) {
+                        color: $grayColor;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            img, svg {
+                width: 24px;
+                height: 24px;
+                color: $lightGray;
+            }
+        }
+
+        #forecast {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 15px;
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+
+            & > div {
+                box-shadow: 0px 2px 120px 10px rgb(220, 220, 220);
+                border-radius: 20px;
+                padding: 15px;
+                
+                img, svg {
+                    width: 24px;
+                    height: 24px;
+                    color: $lightGray;
+                }
+
+                & > div {
+                    &:nth-child(2) {
+                        font-weight: bold;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 11px;
+
+                        svg {
+                            width: 9px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .filter {
+        width: 100% !important;
+        padding: 0 1rem !important;
+        color: black !important;
+        background-color: whitesmoke;
+        margin-top: auto;
+        height: 700px;
+      
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+        align-items: start;
+
+        .search-header {
+            width: 100%;
+            
+            .search-text {
+                text-align: center;
+                margin-top: 20px;
+                color: $grayColor;
+                font-size: 14px;
+            }
+
+            .right-inner-addon {
+                position: relative;
+
+                input {
+                    padding-right: 35px !important;
+                    width: 100%;
+                    padding: 8px 15px;
+                    margin-top: 20px;
+                    background-color: rgb(230, 230, 230) !important;
+                    border: none;
+                }
+
+                svg {
+                    position: absolute;
+                    right: 0px;
+                    top: 20px;
+                    padding: 12px 12px;
+                    pointer-events: none;
+                    z-index: 999999999999999999999999999;
+                }
+            }
+        }
+
+        #item-list {
+            ol {
+                list-style-type: none;
+
+                li {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    button {
+                        background-color: transparent;
+                        width: 150px;
+                        text-align: left;
+                        border: none;
+                    }
+
+                    & > div {
+                        text-align: right;
+                        color: $lightGray;
+                    }
+                }
+            }
+        }
+    }
+}
